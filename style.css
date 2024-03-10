@@ -12,10 +12,10 @@
 }
 
 :root{
-    --bg-color: #081b29;
-    --second-bg-color: #112e42;
+    --bg-color: #0e0816;
+    --second-bg-color: #0a1247;
     --text-color: #ededed;
-    --main-color: #00abf0;
+    --main-color: #4717f6;
 }
 
 html{
@@ -34,11 +34,16 @@ body{
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background: var(--bg-color);
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    transition: .5s;
+}
+
+.header.sticky{
+    background: var(--bg-color);
 }
 
 .logo{
@@ -212,6 +217,7 @@ section{
     z-index: -1;
     transition: .5s;
 }
+
 
 .home-sci a:hover::before{
     width: 100%;
