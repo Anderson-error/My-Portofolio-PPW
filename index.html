@@ -3,287 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
     <title>Anderson</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="Shortcut icon" type="sheet-icon" href="img/sheet.png">
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-<body>
-    <!-- Header Design -->
-    <header class="header">
-        <a href="#" class="logo">Anderson.</a>
+<body class="vh-100 overflow-hidden back" style="background-color: #0e0816;">
+    <header>
+        <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+        <div class="container">
 
-        <div class="bx bx-menu" id="menu-icon"></div>
+            <!-- LOGO -->
+          <a class="navbar-brand fs-4" href="#">Anderson.</a>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Educations</a>
-            <a href="#skills">Skills</a>
-            <a href="#achievements">Certifications</a>
-            <a href="#contact">Contact</a>
-        </nav>
+          <!-- TOOGLE BTN -->
+          <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+
+          <!-- SIDEBAR -->
+          <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+            <!-- sidebar header -->
+            <div class="offcanvas-header text-white border-bottom">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Anderson.</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <!-- sidebar body -->
+            <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+              <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                <li class="nav-item mx-2"><a class="nav-link active" aria-current="page" href="#home">Home</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="#education">Educations</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="#certificate">Certifications</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="#contact">Contact</a></li>
+
+              </ul>
+
+              <!-- Login / sign up -->
+              <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                <a href="#login" class="text-white">Login</a>
+                <a href="#signup" class="text-white text-decoration-none px-3 py-1 rounded-4" style="background-color: #f94ca4;">Sign Up</a>
+
+                <!-- Dark mode -->
+                <button id="darkModeToggle" class="btn btn-dark" onclick="toggleDarkMode()"><i class="fas fa-moon"></i> Dark Mode</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <!-- Home Section Design -->
-    <section class="home" id="home">
-        <div class="home-content">
-            <h1>Hello, I'm <span>Andre Firmansyah</span></h1>
-            <div class="text-animate">
-                <h3>Frontend Developer</h3>
+    <!-- home content -->
+    <section class="hero" id="home">
+      <main class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="hero-text">
+                <h1 class="" style="color: #4717f6;">Hello ,I'm <span>Andre Firmansyah</span></h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <button class="btn btn-primary">Learn More</button>
+              </div>
             </div>
-            <p>I'm a passionate frontend developer with a keen eye for detail and a love for crafting engaging user experiences. Proficient in HTML, CSS, and JavaScript, 
-                I enjoy translating designs into pixel-perfect, responsive websites. Dedicated to continuous learning and innovation, 
-                I thrive in collaborative environments where creativity flourishes.</p>
-
-            <div class="btn-box">
-                <a href="https://api.whatsapp.com/send?phone=6287798244009" class="btn">Hire Me</a>
-                <!-- <a href="#" class="btn">Let's Talk</a> -->
-            </div>
+          </div>
         </div>
-
-        <div class="home-sci">
-            <a href="https://www.facebook.com/andre.firman.5667"><i class='bx bxl-facebook'></i></a>
-            <a href="https://www.instagram.com/justcallmeaan/"><i class='bx bxl-instagram-alt'></i></a>
-            <a href="https://github.com/Anderson-error"><i class='bx bxl-github'></i></a>
-        </div>
-
-        <div class="home-imghover"></div>
+      </main>
     </section>
+    <!-- end home content -->
 
-    <!-- About section design -->
-    <section class="about" id="about">
-        <h2 class="heading">About <span>Me</span></h2>
-
-        <div class="about-img">
-            <img src="img/about.png" alt="">
-            <span class="circle-spin"></span>
+    <!-- about content -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="https://via.placeholder.com/400" class="img-fluid" alt="Placeholder Image">
+          </div>
+          <div class="col-md-6 about-content">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet libero vel dolor blandit eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin eleifend libero vel justo finibus, at euismod odio eleifend.</p>
+            <p>Donec nec scelerisque dolor. Integer ut purus et felis pellentesque lobortis. Morbi commodo magna vel turpis suscipit, nec vestibulum nisl mattis.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
         </div>
-        <div class="about-content">
-        <h3>Frontend Developer!</h3>
-        <p>My name is Andre Firmansyah, an experienced Frontend Developer from Samarinda. 
-            Specializing in Frontend Engineering, I bring 5 years of experience to every project. 
-            With a background in Computer Science Bachelor's Degree obtained in 2026, I focus on innovation and collaboration. 
-            Thank you for visiting.</p>
-
-            <div class="btn-box btns">
-                <a href="#" class="btn">Read More</a>
-            </div>
-        </div>
+      </div>
     </section>
-
-    <!-- education section design -->
-    <section class="education" id="education">
-        <h2 class="heading">My <span>Journey</span></h2>
-
-        <div class="education-row">
-            <div class="education-column">
-                <h3 class="title">Education</h3>
-
-                <div class="education-box">
-                    <div class="education-content">
-                        <div class="content">
-                           <div class="year"><i class='bx bxs-calendar' ></i> 2019 - 2020</div>
-                           <h3>Student - Senior High School ANNUR</h3> 
-                           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum quas iste accusantium eligendi accusamus aliquam voluptates doloribus saepe rem quisquam.</p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                           <div class="year"><i class='bx bxs-calendar' ></i> 2020 - 2022</div>
-                           <h3>Student - Islamic Senior High School ARRIDHO</h3> 
-                           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum quas iste accusantium eligendi accusamus aliquam voluptates doloribus saepe rem quisquam.</p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                           <div class="year"><i class='bx bxs-calendar' ></i> 2022 - Now</div>
-                           <h3>Information System - Mulawarman University</h3> 
-                           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum quas iste accusantium eligendi accusamus aliquam voluptates doloribus saepe rem quisquam.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="education-column">
-                <h3 class="title">Experience</h3>
-
-                <div class="education-box">
-                    <div class="education-content">
-                        <div class="content">
-                           <div class="year"><i class='bx bxs-calendar' ></i> Juni-November 2023</div>
-                           <h3>Aplikasi Committee</h3> 
-                           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum quas iste accusantium eligendi accusamus aliquam voluptates doloribus saepe rem quisquam.</p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                           <div class="year"><i class='bx bxs-calendar' ></i> Juni-November 2023</div>
-                           <h3>Insevent Committee</h3> 
-                           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum quas iste accusantium eligendi accusamus aliquam voluptates doloribus saepe rem quisquam.</p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                           <div class="year"><i class='bx bxs-calendar' ></i> 18-22 Desember 2023</div>
-                           <h3>Mubes INFORSA Committee</h3> 
-                           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum quas iste accusantium eligendi accusamus aliquam voluptates doloribus saepe rem quisquam.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills section design -->
-    <section class="skills" id="skills">
-        <h2 class="heading">My <span>Skills</span></h2>
-
-        <div class="skills-row">
-            <div class="skills-column">
-                <h3 class="title">Coding Skills</h3>
-
-                <div class="skills-box">
-                    <div class="skills-content">
-                        <div class="progress">
-                            <h3>HTML <span>80%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>CSS <span>60%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>JAVA <span>85%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>PYTHON <span>70%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skills-column">
-                <h3 class="title">Professional Skills</h3>
-
-                <div class="skills-box">
-                    <div class="skills-content">
-                        <div class="progress">
-                            <h3>CODING <span>70%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>GAME <span>90%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>EDITING <span>75%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>FISHING <span>50%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- achievements section design -->
-    <section class="achievements" id="achievements">
-        <h2 class="heading">My <span>Achievements</span></h2>
-
-        <div class="achievements-container">
-            <div class="achievements-box">
-                <img src="img/Aplikasi.png" alt="">
-                <div class="achievements-layer">
-                    <h4>Aplikasi 2023</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <i class='bx bx-right-top-arrow-circle'></i>
-                </div>
-            </div>
-
-            <div class="achievements-box">
-                <img src="img/Insevent.jpg" alt="">
-                <div class="achievements-layer">
-                    <h4>Insevent 2023</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <i class='bx bx-right-top-arrow-circle'></i>
-                </div>
-            </div>
-
-            <div class="achievements-box">
-                <img src="img/Mubes.png" alt="">
-                <div class="achievements-layer">
-                    <h4>Mubes INFORSA 2023</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <i class='bx bx-right-top-arrow-circle'></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- contact section design -->
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span></h2>
-
-        <form action="https://api.web3forms.com/submit" method="POST">
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="hidden" name="access_key" value="a89a0ee5-011e-4746-b112-0b62c25c5c1c">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                    <span class="focus"></span>
-                </div>
-                <div class="input-field">
-                    <input type="text" name="email address" placeholder="Email Address" required>
-                    <span class="focus"></span>
-                </div>
-            </div>
-
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="number" name="mobile number" placeholder="Mobile Number" required>
-                    <span class="focus"></span>
-                </div>
-
-
-            <div class="textarea-field">
-                <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                <span class="focus"></span>
-            </div>
-
-            <div class="btn-box btns">
-                <button type="submit" class="btn">Submit</button>
-            </div>
-        </form>
-    </section>
-
-    <!-- footer design -->
-    <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2024 by Anderson Developer | All Rights Reserved</p>
-        </div>
-
-        <div class="footer-iconTop">
-            <a href="#"><i class='bx bxs-up-arrow-alt'></i></a>
-        </div>
-    </footer>
+    <!-- end about content -->
     
 
     <script src="script.js"></script>
