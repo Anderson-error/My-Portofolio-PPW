@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
     border: none;
     outline: none;
     scroll-behavior: smooth;
@@ -19,29 +20,19 @@
 }
 
 section{
-    min-height: 100vh;
+    min-height: 90vh;
     padding: 10rem 9% 2rem;
+    /* color: white; */
 }
 
 html{
     font-size: 90%;
-    overflow-x: hidden;
 }
 
 body{
-    background: var(--bg-color);
-    overflow: ;
-}
-
-.hero{
-    background: url('/img/home.png');
-    background-position: right;
-    background-size: contain;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 10rem 9% 2rem;
+    /* background-image: linear-gradient(to bottom, #0e0816, #000000); */
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 @media (max-width: 991px){
@@ -50,3 +41,307 @@ body{
         backdrop-filter: blur(10px);
     }
 }
+
+/* home section */
+.hero{
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 10rem 9% 2rem;
+}
+/* end home section */
+
+/* about section */
+.about-section img{
+    border-radius: 5px;
+}
+
+#ch{
+    display: none;
+}
+
+#ch:checked ~ .about-content{
+    display: block;
+}
+
+#ch:checked ~ label{
+    display: none;
+}
+
+.about-content{
+    display: none;
+}
+
+label{
+    display: inline-block;
+    cursor: pointer;
+}
+/* end about section */
+
+/* education section */
+.education-card {
+    border: none;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.education-card img {
+    height: 200px; /* Set height for the education image */
+    object-fit: cover; /* Ensure the image covers the entire area */
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+/* end education section */
+
+/* skill content */
+.skills{
+    padding: 5rem 0 2.5rem 0;
+}
+
+.skills .text{
+    width: 70%;
+    margin: 1.5rem auto;
+    text-align: center;
+}
+
+.skills .row{
+    margin: 1rem 0;
+}
+
+.skills .item{
+    padding: 0.5rem 0;
+    margin: 0.3rem 0;
+}
+
+.skills .item-text{
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 600;
+    font-size: 1.3rem;
+    position: relative;
+}
+
+.skills .item-text span:last-child{
+    position: absolute;
+}
+
+.skills .item-text .w-90{
+    margin-left: 85%;
+}
+.skills .item-text .w-80{
+    margin-left: 75%;
+}
+.skills .item-text .w-70{
+    margin-left: 65%;
+}
+.skills .item-text .w-60{
+    margin-left: 55%;
+}
+
+.progress{
+    margin: 0.8rem 0;
+    border-radius: 10px;
+    height: 16px;
+    width: 100%;
+    /* background-color: #333; */
+    overflow: hidden;
+}
+
+.progress-bar{
+    height: 100%;
+    background-color: aqua;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.skills .row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+
+    /* display: flex;
+    flex-wrap: wrap;
+    gap: 5rem; */
+}
+
+.progress .w-90{
+    width: 90%;
+}
+
+.progress .w-80{
+    width: 80%;
+}
+
+.progress .w-70{
+    width: 70%;
+}
+
+.progress .w-60{
+    width: 60%;
+}
+
+
+/* end skill content */
+
+/* certificate section */
+.certificate-section {
+    padding: 100px 0;
+    color: #212529; /* Text color */
+}
+
+.certificate-section h2 {
+    color: #212529;
+}
+
+.card {
+    border: none; /* Remove default card border */
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+.card-img-top {
+    height: 200px; /* Set height for certificate image */
+    object-fit: cover; /* Ensure the image covers the entire area */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Increase font size for card title */
+    margin-bottom: 10px; /* Add some space below the card title */
+}
+
+.card-text {
+    font-size: 1rem; /* Font size for card description */
+    margin-bottom: 20px; /* Add some space below the card description */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Button background color */
+    border-color: #007bff; /* Button border color */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Button background color on hover */
+    border-color: #0056b3; /* Button border color on hover */
+}
+/* end certificate section */
+
+/* contact content */
+.contact{
+    padding: 5rem 0 2.5rem 0;
+}
+
+.contact > .text{
+    width: 70%;
+    margin: 1.5rem auto;
+    text-align: center;
+}
+
+.contact .row{
+    margin: 1rem 0;
+}
+
+.contact .row > div{
+    margin: 2.5rem;
+    padding: 2rem 0;
+}
+
+.contact .col-left h2{
+    text-transform: uppercase;
+}
+
+.contact .contact-info{
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact .contact-info > span{
+    color: aqua;
+    font-size: 2.6rem;
+    margin-right: 1.2rem;
+}
+
+.contact .contact-info h3{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.contact .contact-social-links{
+    display: flex;
+}
+
+.contact .contact-social-links a{
+    font-size: 1.5rem;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #333;
+    margin: 0 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.contact .contact-social-links a:first-child{
+    margin-left: 0;
+}
+
+.contact .contact-social-links a:hover{
+    background: greenyellow;
+}
+
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    margin: 1rem 0;
+    background: #333;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 25px;
+    outline: 0;
+    caret-color: #fff;
+}
+
+.contact-form input:focus, .contact-form textarea:focus{
+    border-color: #fff;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+    text-transform: uppercase;
+}
+
+.contact-form .form-group{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.contact .row > div{
+    margin: 0;
+}
+/* end contact content */
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2.5rem 20%;
+    background: var(--bg-color);
+}
+
+.footer-text p{
+    font-size: 1.3rem;
+}
+
